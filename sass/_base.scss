@@ -130,6 +130,19 @@ table {
 
 //CUSTOM STYLES
 
+@mixin grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@mixin media {
+  background-size: cover;
+}
+
+#news {
+  @include grid;
+  @include media;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -148,8 +161,11 @@ body {
     display: flex;
     justify-content: center;
   }
+  span {
+    color: white;
+  }
 }
 
 img {
-    margin: 20px;
+  margin: 20px;
 }

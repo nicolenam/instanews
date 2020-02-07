@@ -133,6 +133,12 @@ table {
   border-spacing: 0;
 }
 
+#news {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-size: cover;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -150,6 +156,9 @@ body p {
 body #news-search {
   display: flex;
   justify-content: center;
+}
+body span {
+  color: white;
 }
 
 img {
