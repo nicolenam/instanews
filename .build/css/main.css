@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -89,8 +88,8 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -103,80 +102,71 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
-}
+  display: block; }
+
 body {
-  line-height: 1;
-}
+  line-height: 1; }
+
 ol,
 ul {
-  list-style: none;
-}
+  list-style: none; }
+
 blockquote,
 q {
-  quotes: none;
-}
+  quotes: none; }
+
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
   content: "";
-  content: none;
-}
+  content: none; }
+
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
-
-//CUSTOM STYLES
-
-@mixin grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
+  border-spacing: 0; }
 
 .news {
-  @include grid;
-}
+  display: grid;
+  grid-template-columns: 1fr; }
 
 .thumbnail {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
-  position: relative;
-}
+  position: relative; }
 
 body {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
   background-color: black;
   font-size: 16px;
-  font-family: Open Sans Light;
-
-  p {
+  font-family: Open Sans Light; }
+  body p {
     color: white;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    margin: 20px;
-  }
-  #news-search {
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin: 20px; }
+  body #news-search {
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-  }
-  span {
-    color: white;
-  }
-}
+    -ms-flex-pack: center;
+        justify-content: center; }
+  body span {
+    color: white; }
 
 #logo {
   margin: 100px;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .abstract {
-  position: absolute;
-}
+  position: absolute; }
 
 .abstract:nth-child(1) {
-  margin-top: 750px;
-}
+  margin-top: 750px; }

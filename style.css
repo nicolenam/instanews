@@ -133,10 +133,15 @@ table {
   border-spacing: 0;
 }
 
-#news {
+.news {
   display: grid;
   grid-template-columns: 1fr;
-  background-size: cover;
+}
+
+.thumbnail {
+  object-fit: cover;
+  width: 100%;
+  position: relative;
 }
 
 body {
@@ -161,8 +166,17 @@ body span {
   color: white;
 }
 
-img {
-  margin: 20px;
+#logo {
+  margin: 100px;
+  margin-bottom: 20px;
+}
+
+.abstract {
+  position: absolute;
+}
+
+.abstract:nth-child(1) {
+  margin-top: 750px;
 }
 
 /*# sourceMappingURL=style.css.map */
