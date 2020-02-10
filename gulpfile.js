@@ -27,7 +27,7 @@ gulp.task("sass", function() {
       //add prefixes for compatability
       .pipe(autoprefixer())
       //adds css to build dir
-      .pipe(gulp.dest(".build/css"))
+      .pipe(gulp.dest("./build/css"))
       //minifies our CSS
       .pipe(cssnano())
       //renames our CSS files
@@ -45,7 +45,9 @@ gulp.task("watch", function() {
     }
   });
   gulp.watch("js/*.js", gulp.series(["scripts"]));
-  gulp.watch("./*html").on("change", browserSync.reload);
+  gulp.watch('./sass/*.scss', gulp.series(['sass']));
+  gulp.watch("./*.html").on("change", browserSync.reload);
+ 
 });
 
 gulp.task("default", gulp.series("watch"));

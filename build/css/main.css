@@ -126,16 +126,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.news {
-  display: grid;
-  grid-template-columns: 1fr; }
-
-.thumbnail {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  position: relative; }
-
 body {
   display: -ms-flexbox;
   display: flex;
@@ -145,19 +135,21 @@ body {
       flex-direction: column;
   background-color: black;
   font-size: 16px;
-  font-family: Open Sans Light; }
+  font-family: Open Sans Light;
+  overflow-x: hidden; }
   body p {
     color: white;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
-    margin: 20px; }
+    padding-top: 30px; }
   body #news-search {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+    padding-bottom: 50px; }
   body span {
     color: white; }
 
@@ -165,8 +157,60 @@ body {
   margin: 100px;
   margin-bottom: 20px; }
 
-.abstract {
-  position: absolute; }
+.news {
+  display: grid;
+  grid-template-columns: 1fr; }
 
-.abstract:nth-child(1) {
-  margin-top: 750px; }
+.thumbnail {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%; }
+
+figure {
+  position: relative; }
+
+.abstract {
+  position: absolute;
+  background: #4e4e4e;
+  border: #4e4e4e;
+  opacity: 0.8;
+  width: 100%;
+  bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+@media screen and (min-width: 600px) {
+  .news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+  #logo {
+    margin-right: 0px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    float: left; }
+  p {
+    margin-top: 150px; }
+  #footer p {
+    margin-top: 50px; } }
+
+@media screen and (min-width: 1240px) {
+  .news {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+  body p {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    padding-left: 100px; }
+  body #news-search {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    padding-left: 100px; }
+  .abstract {
+    padding-left: 0px; }
+  #footer p {
+    margin-top: 50px; } }

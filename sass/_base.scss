@@ -128,21 +128,11 @@ table {
   border-spacing: 0;
 }
 
-//CUSTOM STYLES
+//CUSTOM STYLES MOBILE
 
 @mixin grid {
   display: grid;
   grid-template-columns: 1fr;
-}
-
-.news {
-  @include grid;
-}
-
-.thumbnail {
-  object-fit: cover;
-  width: 100%;
-  position: relative;
 }
 
 body {
@@ -152,16 +142,18 @@ body {
   background-color: black;
   font-size: 16px;
   font-family: Open Sans Light;
+  overflow-x: hidden;
 
   p {
     color: white;
     display: flex;
     justify-content: center;
-    margin: 20px;
+    padding-top: 30px;
   }
   #news-search {
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
   }
   span {
     color: white;
@@ -173,10 +165,72 @@ body {
   margin-bottom: 20px;
 }
 
-.abstract {
-  position: absolute;
+.news {
+  @include grid;
 }
 
-.abstract:nth-child(1) {
-  margin-top: 750px;
+.thumbnail {
+  object-fit: cover;
+  width: 100%;
+}
+
+figure {
+  position: relative;
+}
+.abstract {
+  position: absolute;
+  background: rgb(78, 78, 78);
+  border: rgb(78, 78, 78);
+  opacity: 0.8;
+  width: 100%;
+  bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+//TABLET
+
+@media screen and (min-width: 600px) {
+  .news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #logo {
+    margin-right: 0px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    float: left;
+  }
+  p {
+    margin-top: 150px;
+  }
+  #footer p {
+    margin-top: 50px;
+  }
+}
+
+//DESKTOP
+
+@media screen and (min-width: 1240px) {
+  .news {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body p {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+  }
+  body #news-search {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+  }
+  .abstract {
+    padding-left: 0px;
+  }
+  #footer p {
+    margin-top: 50px;
+  }
 }
