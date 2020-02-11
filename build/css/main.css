@@ -135,8 +135,7 @@ body {
       flex-direction: column;
   background-color: black;
   font-size: 16px;
-  font-family: Open Sans Light;
-  overflow-x: hidden; }
+  font-family: Open Sans Light; }
   body p {
     color: white;
     display: -ms-flexbox;
@@ -154,8 +153,8 @@ body {
     color: white; }
 
 #logo {
-  margin: 100px;
-  margin-bottom: 20px; }
+  margin-left: 25%;
+  margin-top: 10%; }
 
 .news {
   display: grid;
@@ -178,6 +177,12 @@ figure {
   bottom: 0;
   padding-top: 10px;
   padding-bottom: 10px; }
+
+#loader {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%; }
 
 @media screen and (min-width: 600px) {
   .news {
