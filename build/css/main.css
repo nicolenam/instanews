@@ -126,7 +126,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
+html, body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -135,21 +135,23 @@ body {
       flex-direction: column;
   background-color: black;
   font-size: 16px;
-  font-family: Open Sans Light; }
-  body p {
+  font-family: Open Sans Light;
+  width: 100%;
+  height: 100%; }
+  html p, body p {
     color: white;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     padding-top: 30px; }
-  body #news-search {
+  html #news-search, body #news-search {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     padding-bottom: 50px; }
-  body span {
+  html span, body span {
     color: white; }
 
 #logo {
@@ -158,7 +160,9 @@ body {
 
 .news {
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  height: 100%;
+  width: 100%; }
 
 .thumbnail {
   -o-object-fit: cover;
@@ -188,6 +192,8 @@ figure {
   .news {
     display: grid;
     grid-template-columns: repeat(3, 1fr); }
+  .thumbnail {
+    height: 400px; }
   #logo {
     margin-right: 0px;
     margin-left: 50px;
