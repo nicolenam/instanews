@@ -126,33 +126,35 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-html, body {
+html,
+body {
+  font-size: 16px;
+  font-family: Open Sans Light;
+  color: white;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-direction: column;
       flex-direction: column;
-  background-color: black;
-  font-size: 16px;
-  font-family: Open Sans Light;
-  width: 100%;
-  height: 100%; }
-  html p, body p {
+  background-color: black; }
+  html p,
+  body p {
+    font-size: 16px;
+    font-family: Open Sans Light;
     color: white;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     padding-top: 30px; }
-  html #news-search, body #news-search {
+  html #news-search,
+  body #news-search {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     padding-bottom: 50px; }
-  html span, body span {
-    color: white; }
 
 #logo {
   margin-left: 25%;
@@ -167,7 +169,8 @@ html, body {
 .thumbnail {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%; }
+  width: 100%;
+  height: 300px; }
 
 figure {
   position: relative; }
@@ -187,6 +190,9 @@ figure {
   margin-left: auto;
   margin-right: auto;
   width: 30%; }
+
+#footer p {
+  color: #c2c2c2; }
 
 @media screen and (min-width: 600px) {
   .news {
@@ -209,6 +215,8 @@ figure {
   .news {
     display: grid;
     grid-template-columns: repeat(4, 1fr); }
+  .thumbnail {
+    height: 600px; }
   body p {
     display: -ms-flexbox;
     display: flex;

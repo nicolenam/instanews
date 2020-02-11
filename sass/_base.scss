@@ -90,6 +90,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+ overflow-x: hidden;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -135,18 +136,22 @@ table {
   grid-template-columns: 1fr;
 }
 
-html, body {
+@mixin font {
+  font-size: 16px;
+  font-family: Open Sans Light;
+  color: white;
+}
+
+html,
+body {
+  @include font;
   display: flex;
   justify-content: center;
   flex-direction: column;
   background-color: black;
-  font-size: 16px;
-  font-family: Open Sans Light;
-  width: 100%;
-  height: 100%;
 
   p {
-    color: white;
+    @include font;
     display: flex;
     justify-content: center;
     padding-top: 30px;
@@ -155,9 +160,6 @@ html, body {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
-  }
-  span {
-    color: white;
   }
 }
 
@@ -175,7 +177,7 @@ html, body {
 .thumbnail {
   object-fit: cover;
   width: 100%;
-
+  height: 300px;
 }
 
 figure {
@@ -196,7 +198,13 @@ figure {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 2%;
+}
+
+#footer p {
+  @include font{
+  color: #c2c2c2;
+  }
 }
 
 //TABLET
@@ -230,6 +238,9 @@ figure {
   .news {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+  .thumbnail {
+    height: 600px;
   }
   body p {
     display: flex;
