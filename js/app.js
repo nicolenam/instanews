@@ -3,18 +3,24 @@ $(function() {
 
   $(".content").on("change", function(e) {
     // let section = $(".content option:selected").text();
-  
+    $("#logo").animate({width:"100px", height:"100px"}, "slow");
+    $("#top").animate({marginTop:"80px"}, "slow");
+
     let section = $(".content option:selected").val();
-    console.log(section);
+    $(".news").empty();
     $("#loader").show();
+   
+
+
+
     $.ajax({
       dataType: "json",
       method: "GET",
       url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=qZeF0WlVIE49aaMuTGpSM5bAxYeDLSyT`
     }).done(function(data) {
       $("#loader").hide();
-      $(".news").empty();
-console.log(data)
+
+      console.log(data);
       for (let i = 0; i <= 11; i++) {
         let multimedia = data.results[i].multimedia[0].url;
         let abstract = data.results[i].abstract;

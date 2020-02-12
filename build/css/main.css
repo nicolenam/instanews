@@ -147,7 +147,10 @@ body {
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
-    padding-top: 30px; }
+    margin-top: 30px; }
+  html select,
+  body select {
+    margin-top: 2%; }
   html #news-search,
   body #news-search {
     display: -ms-flexbox;
@@ -170,7 +173,8 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 300px; }
+  height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2)); }
 
 figure {
   position: relative; }
@@ -180,18 +184,19 @@ figure {
   background: #4e4e4e;
   border: #4e4e4e;
   opacity: 0.8;
-  width: 100%;
   bottom: 0;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding: 10px; }
 
 #loader {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%; }
+  width: 10%; }
 
 #footer p {
+  font-size: 16px;
+  font-family: Open Sans Light;
+  color: white;
   color: #c2c2c2; }
 
 @media screen and (min-width: 600px) {
@@ -200,23 +205,39 @@ figure {
     grid-template-columns: repeat(3, 1fr); }
   .thumbnail {
     height: 400px; }
+  body p {
+    margin-top: 150px; }
   #logo {
     margin-right: 0px;
     margin-left: 50px;
     margin-bottom: 50px;
     margin-top: 50px;
-    float: left; }
-  p {
-    margin-top: 150px; }
+    float: left;
+    -webkit-animation-name: logo;
+            animation-name: logo;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s; }
+  body #news-search {
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+  #top {
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -webkit-animation-name: section;
+            animation-name: section;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s; }
   #footer p {
-    margin-top: 50px; } }
+    margin-top: 50px; }
+  .container {
+    margin-left: 150px; } }
 
 @media screen and (min-width: 1240px) {
   .news {
     display: grid;
     grid-template-columns: repeat(4, 1fr); }
   .thumbnail {
-    height: 600px; }
+    height: 500px; }
   body p {
     display: -ms-flexbox;
     display: flex;
@@ -228,8 +249,12 @@ figure {
     display: flex;
     -ms-flex-pack: start;
         justify-content: flex-start;
-    padding-left: 100px; }
+    padding-left: 50px; }
+  #top {
+    padding-left: 50px; }
   .abstract {
-    padding-left: 0px; }
+    padding: 10px; }
   #footer p {
-    margin-top: 50px; } }
+    margin-top: 50px; }
+  .container {
+    margin-left: 0px; } }

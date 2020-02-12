@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="./build/css/main.css" />
     <!-- change this to the minified css -->
     <title>Instant News</title>
@@ -11,9 +12,9 @@
   <body>
     <div class="container">
       <img id="logo" src="images/nyt-logo.svg" alt="nyt-logo" />
-      <p>Choose a section:</p>
+      <p id="top">Choose a section:</p>
       <form action="" id="news-search">
-        <select class="content">
+      <select class="content">
     </div>
     <div class="page-wrapper">
 
@@ -48,6 +49,7 @@
       </form>
     </div>
     <img id="loader" src="./images/ajax-loader.gif">
+  </div>
     <div class="news"></div>
     <footer id="footer">
       <p>&copy Copyright 2016 INSTANEWS</p>

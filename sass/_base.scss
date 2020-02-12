@@ -90,7 +90,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
- overflow-x: hidden;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -154,7 +153,10 @@ body {
     @include font;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    margin-top: 30px;
+  }
+  select {
+    margin-top: 2%;
   }
   #news-search {
     display: flex;
@@ -178,6 +180,7 @@ body {
   object-fit: cover;
   width: 100%;
   height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2));
 }
 
 figure {
@@ -188,23 +191,20 @@ figure {
   background: rgb(78, 78, 78);
   border: rgb(78, 78, 78);
   opacity: 0.8;
-  width: 100%;
   bottom: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 #loader {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 2%;
+  width: 10%;
 }
 
 #footer p {
-  @include font{
+  @include font;
   color: #c2c2c2;
-  }
 }
 
 //TABLET
@@ -217,18 +217,33 @@ figure {
   .thumbnail {
     height: 400px;
   }
+  body p {
+    margin-top: 150px;
+  }
   #logo {
     margin-right: 0px;
     margin-left: 50px;
     margin-bottom: 50px;
     margin-top: 50px;
     float: left;
+
+    animation-name: logo;
+    animation-duration: 4s;
   }
-  p {
-    margin-top: 150px;
+  body #news-search {
+    justify-content: flex-start;
+  }
+  #top {
+    justify-content: flex-start;
+
+    animation-name: section;
+    animation-duration: 4s;
   }
   #footer p {
     margin-top: 50px;
+  }
+  .container {
+    margin-left: 150px;
   }
 }
 
@@ -240,8 +255,9 @@ figure {
     grid-template-columns: repeat(4, 1fr);
   }
   .thumbnail {
-    height: 600px;
+    height: 500px;
   }
+
   body p {
     display: flex;
     justify-content: flex-start;
@@ -250,12 +266,18 @@ figure {
   body #news-search {
     display: flex;
     justify-content: flex-start;
-    padding-left: 100px;
+    padding-left: 50px;
+  }
+  #top {
+    padding-left: 50px;
   }
   .abstract {
-    padding-left: 0px;
+    padding: 10px;
   }
   #footer p {
     margin-top: 50px;
+  }
+  .container {
+    margin-left: 0px;
   }
 }
