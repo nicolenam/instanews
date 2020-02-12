@@ -2,7 +2,7 @@ $(function() {
   $("#loader").hide();
 
   $(".content").on("change", function(e) {
-    // let section = $(".content option:selected").text();
+
     if ($(window).width() > 600) {
       $("#logo").animate({ width: "100px", height: "100px" }, 1000, "linear");
       $("#top").animate({ marginTop: "80px" }, 1000, "linear");

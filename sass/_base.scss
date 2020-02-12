@@ -141,26 +141,33 @@ table {
   color: white;
 }
 
+@mixin flex {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexStart {
+  display: flex;
+  justify-content: flex-start;
+}
+
 html,
 body {
   @include font;
-  display: flex;
-  justify-content: center;
+  @include flex;
   flex-direction: column;
   background-color: black;
 
   p {
     @include font;
-    display: flex;
-    justify-content: center;
+    @include flex;
     margin-top: 30px;
   }
   select {
     margin-top: 2%;
   }
   #news-search {
-    display: flex;
-    justify-content: center;
+    @include flex;
     padding-bottom: 50px;
   }
 }
@@ -235,9 +242,6 @@ figure {
   }
   #top {
     justify-content: flex-start;
-
-    animation-name: section;
-    animation-duration: 4s;
   }
   #footer p {
     margin-top: 50px;
@@ -259,13 +263,11 @@ figure {
   }
 
   body p {
-    display: flex;
-    justify-content: flex-start;
+    @include flexStart;
     padding-left: 100px;
   }
   body #news-search {
-    display: flex;
-    justify-content: flex-start;
+    @include flexStart;
     padding-left: 50px;
   }
   #top {

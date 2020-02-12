@@ -222,11 +222,7 @@ figure {
         justify-content: flex-start; }
   #top {
     -ms-flex-pack: start;
-        justify-content: flex-start;
-    -webkit-animation-name: section;
-            animation-name: section;
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s; }
+        justify-content: flex-start; }
   #footer p {
     margin-top: 50px; }
   .container {
