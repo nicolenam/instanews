@@ -3,15 +3,14 @@ $(function() {
 
   $(".content").on("change", function(e) {
     // let section = $(".content option:selected").text();
-    $("#logo").animate({width:"100px", height:"100px"}, "slow");
-    $("#top").animate({marginTop:"80px"}, "slow");
+    if ($(window).width() > 600) {
+      $("#logo").animate({ width: "100px", height: "100px" }, 1000, "linear");
+      $("#top").animate({ marginTop: "80px" }, 1000, "linear");
+    }
 
     let section = $(".content option:selected").val();
     $(".news").empty();
     $("#loader").show();
-   
-
-
 
     $.ajax({
       dataType: "json",
