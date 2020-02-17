@@ -1,6 +1,7 @@
 ## **Objective:**
 
 The objective of this project was to to create a one-page, responsive website that allows a user to filter top news story categories via the New York Times API.
+![Getting Started](./images/nytimes.PNG)
 
 ## **Technologies Used:**
 
