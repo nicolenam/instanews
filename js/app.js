@@ -34,7 +34,7 @@ $(function() {
       }
       $("#loader").hide();
       $(".abstract").mouseenter(function() {
-        $(this).css("background-color", "#6C0505");
+        $(this).css("background-color", "#cc0000");
       });
       $(".abstract").mouseleave(function() {
         $(this).css("background-color", "rgb(78, 78, 78)");

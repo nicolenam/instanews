@@ -159,6 +159,9 @@ body {
         justify-content: center;
     padding-bottom: 50px; }
 
+.content::-webkit-scrollbar-thumb {
+  color: red; }
+
 #logo {
   margin-left: 25%;
   margin-top: 10%; }
@@ -249,7 +252,8 @@ figure {
   #top {
     padding-left: 50px; }
   .abstract {
-    padding: 10px; }
+    padding: 10px;
+    width: -webkit-fill-available; }
   #footer p {
     margin-top: 50px; }
   .container {

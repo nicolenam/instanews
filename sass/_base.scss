@@ -171,6 +171,9 @@ body {
     padding-bottom: 50px;
   }
 }
+.content::-webkit-scrollbar-thumb {
+  color: red;
+}
 
 #logo {
   margin-left: 25%;
@@ -275,8 +278,9 @@ figure {
   }
   .abstract {
     padding: 10px;
+    width: -webkit-fill-available;
   }
- 
+
   #footer p {
     margin-top: 50px;
   }
